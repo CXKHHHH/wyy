@@ -55,7 +55,7 @@ const store = new Vuex.Store({
         //登录信息存储
         async requestLoginCellphone(store,data){
             const [err,res] = await loginCellphone(data)
-            if(err) return alert('请求错误，请稍后再试') 
+            if(err) return console.log(err)
             alert("登录成功")
             // console.log(res)
             store.commit('updataAuth',res)

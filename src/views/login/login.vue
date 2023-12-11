@@ -1,7 +1,7 @@
 <template>
   <div class="w-[100vw] h-[40vw]">
         <h3 class="flex justify-around h-[20vw] tit " ><router-link to="/index"><span>x</span></router-link> <span>游客登录</span></h3>
-        <div v-if="less!=true">
+        <div v-if="less==true">
         <div><Icon icon="ri:netease-cloud-music-fill" class="wangt text-9xl  m-auto"/> </div>
         <div class="npu w-[70vw] h-[15vw]  m-auto rounded-2xl mt-40  flex">
             <router-link to="/poer">
@@ -21,7 +21,7 @@
        
         </div>
 
-        <div v-if="less==true" @click="angt">
+        <div v-if="less!=true" @click="angt">
         <P class="flex justify-around text-5xl w-[76vw]" ><span>输入验证码</span><span></span></P>
         <p class="flex justify-around text-3xl mt-4" ><span>验证码已发送至+86 {{phones}}</span><span></span></p>
         <!-- 密码输入框 -->
@@ -47,7 +47,7 @@ export default {
     // },
     data(){
         return{
-            phones:'',
+            phones:13545665267,
             captcha:'',
             falg:false,
             less:false,
