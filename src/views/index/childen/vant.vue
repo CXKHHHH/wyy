@@ -446,7 +446,7 @@
               </li>
          </ul>
       </div>
-      <div class="mx-auto mt-[4vw]  w-[76vw] h-[10.66vw]  ">
+      <div class="mx-auto mt-[4vw]  w-[76vw] h-[10.66vw]  " @click="logout()">
         <div class="w-[76vw] h-[16vw] bg-[#FFFFFF] rounded-[20vw] dark:bg-[#2C2C2C]">
           <p class="text-[#F92672] w-[76vw] text-[3.5vw]   text-center leading-[16vw]">退出登录</p>
           </div>
@@ -491,7 +491,11 @@ export default {
             // console.log(res.data.profile.nickname);
             this.user = res.data.profile
           },
-         
+           logout(){
+            confirm("确定要退出吗") 
+            this.$store.dispatch("requestlogout")
+          }
+
         },
         created(){
         this.onle()

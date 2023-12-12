@@ -39,10 +39,13 @@ const store = new Vuex.Store({
        state.playlist  = res
        state.tracks = a
         // state.songsheet = res
+        },
+        updatalogout(state){
+       
+            state.tracks = ""
+            state.mymusci = ""
+            state.playlist = ""
         }
-        // updataMusicint(state,res){
-
-        // }
     },
     //actions 定义异步修改公共数据的方法 (借助mutations)
     actions:{
@@ -74,13 +77,10 @@ const store = new Vuex.Store({
             console.log(" this.playlist ",res.data.songs)
             store.commit('updataMusic',res.data.songs)
         },
-        // async request(store,data){
-        //     const [err,res] = await getSong(data)
-        //     if(err) return
-        //     this.musciq = res.data.songs
-        //     this.ar = res.data.songs[0].ar[0]
-        //     store.commit('updataMusic',res)
-        // }
+        //退出登陆
+        async requestlogout(){
+            store.commit('updatalogout')
+        }
     },
     //actions 触发 store.dispatch("")
     //plugins 扩展其他功能

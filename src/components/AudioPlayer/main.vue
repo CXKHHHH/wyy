@@ -1,5 +1,5 @@
 <template>
- <div class="w-[100vw] h-[10vw] bg-[#FFFFFF] fixed bottom-[14vw]  flex justify-around" style="z-999" >
+ <div class="w-[100vw] h-[10vw] bg-[#FFFFFF] fixed bottom-[14vw]  flex justify-around dark:bg-[#2C2C2C]"  >
         <div  class="w-[60vw] flex">
           <span class="w-[20vw] h-[10vw] " v-if="mixin_player.currentTrackDetail.al !=undefined">
             <img class="w-[10vw] h-[10vw] ml-[4vw] rounded-[20vw] inline-block" :src="mixin_player.currentTrackDetail.al.picUrl" alt="">
@@ -16,13 +16,13 @@
             <span class=" text-[6vw]" >
               <Icon style="z-999"  class=" absolute right-[18vw] top-[1vw] " :icon="mixin_player.playing==false?'cil:media-play':'gg:play-pause'" />
               </span>
-           <van-circle  style="height:8vw"  :value="mixin_player.propress*100" speed="100"   />
+           <van-circle color="red"   style="height:8vw;"  :value="mixin_player.propress*100" speed="100"   />
           </div>
          <div class="h-[10vw] w-[20vw]">
             <van-cell is-link title="" @click="show = true"  style="background:none"/>
-            <van-action-sheet v-model="show" title="标题" style="height:70vw">
+            <van-action-sheet v-model="show" title="歌曲切换" style="height:70vw">
                 <div class=" flex text-[5vw] justify-between w-[90vw] h-[9vw] overflow-hidden" v-for="(item,index) in playlist" :key="index" >
-                    <span class="w-[10vw] text-center">{{index+1}}</span>
+
                     <span class="w-[50vw] " v-if="item.name!=undefined" @click="listen(index)">{{item.name}}</span>
                     <span class="w-[6vw] text-center">x</span>
                 </div>
@@ -75,5 +75,5 @@ export default {
 </script>
 
 <style>
-
+ 
 </style>

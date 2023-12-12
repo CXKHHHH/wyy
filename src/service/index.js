@@ -157,5 +157,9 @@ export const getSong = (params) => {
 
 
 export const getCommentMusic = (data) => {
-  return co(request.get(`/comment/music`,data));
+  return co(request.post(`/comment/music?timestamp=${Date.now()}`,data));
 }
+
+
+//退出登陆
+

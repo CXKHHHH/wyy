@@ -30,6 +30,11 @@ export default [
         component:()=>import("@/views/index/music/comment/comment.vue")
     },
     {
+        path:'/searpage',
+        // component:login
+        component:()=>import("@/views/index/searchfor/searpage")
+    },
+    {
         path:'/index',
         // component:
         component:()=>import("@/views/index")

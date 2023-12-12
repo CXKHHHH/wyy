@@ -9,15 +9,15 @@
         <span class="text-[10vw]"><Icon icon="bi:share" /></span>
     </div>
     <div class="w-[100vw] h-[80vw] mt-[35vw] ">
-        <div class="w-[70vw] h-[70vw] bg-[#FFFFFF] rounded-[50vw] m-auto rotating-box overflow-hidden" >
-                <img class="" :src="mixin_player.currentTrackDetail.al.picUrl" alt="">
+        <div class="w-[70vw] h-[70vw] bg-[#FFFFFF] rounded-[50vw] m-auto overflow-hidden" >
+                <img class="rotating-box " ref="rotate" :src="mixin_player.currentTrackDetail.al.picUrl" alt="">
         </div>
     </div>
     <div class=" flex w-[90vw] text-[10vw] text-[#FFFFFF] m-auto justify-around mt-[25vw] font-thin"> 
         <span><Icon icon="tabler:heart" /></span>
         <span><Icon icon="line-md:download-loop" /></span>
         <span><Icon icon="tabler:bell" /></span>
-        <span><Icon icon="fluent:chat-12-regular" /></span>
+        <router-link to="/comment"> <span><Icon icon="fluent:chat-12-regular" /></span></router-link>
         <span><Icon icon="mingcute:more-2-fill" /></span>
     </div>
     <div class="flex justify-around mt-[10vw]">
@@ -78,10 +78,12 @@ export default {
  
     play(){
           this.mixin_player.play(this.tracks)
+          this.$refs.rotate.className = "rotating-box"
           // console.log(this.mixin_player.propress*100)
     },
      playpause(){
           this.mixin_player.suspend()
+           this.$refs.rotate.className = ""
     },
     previoussong(){
           this.mixin_player.playNextTeack()

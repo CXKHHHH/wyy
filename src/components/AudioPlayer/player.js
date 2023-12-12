@@ -43,7 +43,6 @@ export default class{
         console.log(track)
         if(getSongerr) return console.log(getSongerr)
         this.currentTrackDetail = res.data.songs[0]
-  
         console.log("plauy",res)
         const mp3Url = reson.data.data[0].url
         if(mp3Url) return this.mountAudioSaource(mp3Url,true)

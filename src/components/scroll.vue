@@ -4,8 +4,8 @@ export default {
   props: {
     config: {
       type: Object,
-      default: () => ({ scrollX: true }),
-      click:true
+      default: () => ({ scrollX: true, click:true }),
+     
     },
   },
   mounted() {

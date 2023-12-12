@@ -2,7 +2,7 @@
       <div class="w-[100vw] overflow-hidden ">
          <Card :title="resource.uiElement.subTitle.title"></Card> 
           <Scroll>
-            <div class="flex" :style="{ width: `${this.resource.creatives.length * 31}vw` }">
+            <div class="flex ml-[2vw]" :style="{ width: `${this.resource.creatives.length * 31}vw` }">
               <div class="w-[25vw] ml-7 " v-for="creatives in this.resource.creatives" :key="creatives.id">
                 <img  class="rounded-xl relative" :src="creatives.uiElement.image.imageUrl" alt="">
                 <!-- <span class="play absolute "><Icon  class=" text-4xl" icon="ph:play-fill" /></span> -->

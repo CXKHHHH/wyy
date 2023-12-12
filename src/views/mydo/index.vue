@@ -1,5 +1,6 @@
 <template>
   <div class=" bg-[#EEEFF2] dark:bg-[#1E1F1C]">
+    <AudioPlayer class="z-50"></AudioPlayer>
        <div class="header h-[16vw] w-[100vw] text-3xl flex   justify-around items-center ;">
           <div class="dark:text-[#FFFFFF]">
                 <Icon icon="octicon:three-bars-16" />
@@ -45,7 +46,7 @@ export default {
 <style >
   .Serch{
     background: none;
- 
+
   }
  
  

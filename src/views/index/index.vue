@@ -1,13 +1,14 @@
 <template>
   <div class="absolute z-10 dark:bg-[#2C2C2C] dark:text-[#FFFFFF]">
+    <AudioPlayer class="z-50"></AudioPlayer>
     <!-- 搜索框 -->
       <div class="header h-[16vw] w-[100vw] text-3xl flex bg-[#E7E7FB]  justify-around items-center dark:bg-[#2C2C2C]" >
           <div>
-            <van-cell @click="showPopup" style="background:none" class="dark:bg-[#FFFFFF]"><Icon icon="octicon:three-bars-16" /></van-cell>
+            <van-cell @click="showPopup" style="background:none"><Icon  class="dark:text-[#FFFFFF]" icon="octicon:three-bars-16" /></van-cell>
           </div>
                 <div class="dark:from-[#34304b]  dark:to-[#403246] dark:border-0 text-[4.47vw] pl-[8vw] bg-gradient-to-r from-[#d9ddfd] text-[#8189A1] to-[#f3d9ef] opacity-0.2 w-[75vw] h-[10vw] border-2 border-[#CCCEF7] rounded-[25px]">
                     <span class="line-block  float-left  mt-[2.5vw]"><Icon icon="simple-line-icons:magnifier" /></span>
-                    <input type="text" class="Serch mt-[1.5vw] border-none  outline-0 ml-1 bg-inherit" placeholder="风吹丹顶鹤" v-model="music" @click ="search()">
+                    <router-link to="/searpage"><input type="text" class="Serch  border-none  outline-0 ml-1 bg-inherit" placeholder="风吹丹顶鹤" v-model="music" @click ="search()"></router-link>
                 </div>
           <div>
               <Icon icon="wpf:microphone" />
