@@ -5,11 +5,11 @@
         <div><Icon icon="ri:netease-cloud-music-fill" class="wangt text-9xl  m-auto"/> </div>
         <div class="npu w-[70vw] h-[15vw]  m-auto rounded-2xl mt-40  flex">
             <router-link to="/poer">
-            <span class="add  w-[20vw] h-[15vw] text-3xl  text-center flex items-center" @click="ant">+86  
-                 <Icon icon="tabler:triangle-inverted-filled" class=" text-xl" />
+            <span class="add  w-[20vw] h-[15vw] text-[5vw]  text-center flex items-center" @click="ant">+86  
+                 <Icon icon="tabler:triangle-inverted-filled" class=" text-[3vw]" />
                  </span></router-link>
-            <input type="text" class="w-[40vw] h-[10vw] text-4xl mt-5 " v-model="phones">
-            <span class="empty inline-block text-center w-[5vw] h-[5vw] mt-7">x</span>
+            <input type="text" class="w-[40vw] h-[10vw] text-[4vw] mt-2 " v-model="phones">
+            <span class="empty inline-block text-center w-[5vw] h-[5vw] mt-4">x</span>
         </div>
        
         <div class="w-[100vw] h-[17vw] mt-14">
