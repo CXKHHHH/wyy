@@ -21,7 +21,7 @@
          <div class="h-[10vw] w-[20vw]">
             <van-cell is-link title="" @click="show = true"  style="background:none"/>
             <van-action-sheet v-model="show" title="歌曲切换" style="height:70vw">
-                <div class=" flex text-[5vw] justify-between w-[90vw] h-[9vw] overflow-hidden" v-for="(item,index) in playlist" :key="index" >
+                <div class=" flex text-[5vw] justify-between w-[90vw] h-[13vw] overflow-hidden m-auto" v-for="(item,index) in playlist" :key="index" >
 
                     <span class="w-[50vw] " v-if="item.name!=undefined" @click="listen(index)">{{item.name}}</span>
                     <span class="w-[6vw] text-center">x</span>
